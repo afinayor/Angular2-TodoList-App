@@ -1,0 +1,10 @@
+
+<app-navigation></app-navigation>
+<div class="container">
+    <app-add-to-list-form (listItemAdded)="addNewListItem($event)"
+            (clearTodoList)="clearList()"
+            ></app-add-to-list-form>
+    <app-todo-list [listData]="listArray"
+                   (upChangeStatus)="changeStatusData($event)"
+                   (deleteItemApp)="deleteData($event)"></app-todo-list>
+</div>

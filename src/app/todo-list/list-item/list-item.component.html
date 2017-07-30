@@ -1,0 +1,6 @@
+<div class="well">
+    <p [ngClass]="{complete: listItemCon.status === 'complete',incomplete: listItemCon.status === 'incomplete'}">{{listItemCon.todo}}</p>
+    <button class="btn btn-success" (click)="changeStatus({data:listItemCon,status:'complete'})" *ngIf="listItemCon.status ==='incomplete'">Complete</button>
+    <button class="btn btn-info" (click)="changeStatus({data:listItemCon,status:'incomplete'})" *ngIf="listItemCon.status ==='complete'">Incomplete</button>
+    <button class="btn btn-danger" (click)="delete(listItemCon)">Delete</button>
+</div>

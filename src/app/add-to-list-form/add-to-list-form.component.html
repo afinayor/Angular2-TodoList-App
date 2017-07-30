@@ -1,0 +1,8 @@
+<h2 class="text-center">Todo List App</h2>
+
+<div class="form-group">
+  <label for="itemInput">Add Item</label>
+  <input type="text" class="form-control" [(ngModel)]="listItem" name="" id="itemInput" >
+</div>
+<button [disabled]="listItem == ''" id="addButton" (click)="addToList()" class="btn btn-primary">Add To List</button>
+<button id="clearButton" (click)="clearList()" class="btn btn-danger">Clear Todo List</button>
